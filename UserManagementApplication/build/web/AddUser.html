@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add User</title>
+        <style type="text/css">
+        </style>
+        <script src="js/validation.js"></script>
+    </head>
+    <body>
+        <form name="addUser" action="AddUserServlet" method="post">
+            <h1>Add User</h1>
+
+            <label>ID :</label> <input type="text" name="id"> <br> <br>
+            <label>Name :</label> <input type="text" name="name"> <br>
+            <br> <label>Gender :</label> <input type="radio" name="gender"
+                                                value="male" checked> Male <input type="radio" name="gender"
+                                                value="female"> Female <input type="radio" name="gender"
+                                                value="other"> Other <br> <br> <label>Address
+                :</label> <input type="text" name="address"> <br> <br> <label>Email
+                :</label> <input type="text" name="email" onblur="emailValidation(document.addUser.email)" onkeyup="submitBtnValidation(document.addUser)"> <br> <br> <label>No
+                    Of Vehicles :</label> <input type="text" name="nosVehicle" onkeyup="noValidation(document.addUser.nosVehicle)"> <br>
+            <br> <label>Contact No :</label> <input type="text"
+                                                    name="contact" onkeyup="tpValidation(document.addUser, document.addUser.contact)" onblur="tpNoFocusLost(document.addUser.contact)"> <br> <br>
+            <input type="submit"
+                   value="Add User"> <input type="reset" value="Clear">
+            <br> <br>
+
+        </form>
+    </body>
+</html>
